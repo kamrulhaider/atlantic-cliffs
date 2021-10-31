@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import useAuth from '../../hooks/useAuth';
+import './MyOrder.css'
 
 const MyOrder = () => {
     const { user } = useAuth();
@@ -32,10 +33,10 @@ const MyOrder = () => {
     };
 
     return (
-        <div>
-            <h1 className="text-success text-center mb-5">Your order list</h1>
+        <div className="myOrder my-5">
+            <h3 className="text-success text-center mb-5">Your order list</h3>
             {
-                result.map(details => <h2 className="text-center" key={details._id}>{details.serviceName} <button onClick={() => handleDelete(details._id)} className="btn btn-danger">X</button></h2>)
+                result.map(details => <h4 className="text-center my-all" key={details._id}>{details.serviceName} <button onClick={() => handleDelete(details._id)} className="btn btn-danger">X</button></h4>)
             }
         </div>
     );

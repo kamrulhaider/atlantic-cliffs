@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './Service.css'
 
 const Service = (props) => {
 
@@ -9,16 +10,16 @@ const Service = (props) => {
     return (
         <div>
             <Col>
-                <Card className="border-0 therapy">
-                    <Card.Img className="therapy-img" variant="top" src={img} />
-                    <Card.Body className="therapy-body">
+                <Card className="service p-2">
+                    <Card.Img className="service-img" variant="top" src={img} />
+                    <Card.Body className="service-body">
                         <Card.Title>{name}</Card.Title>
                         <Card.Text>
-                            {description.slice(0, 150)}...
+                            {description.slice(0, 100)}...
                         </Card.Text>
                         <h5>Price: {price}</h5>
                         <Link to={`/details/${_id}`}>
-                            <button className="btn btn-outline-dark">Buy Now</button>
+                            <button className="btn btn-outline-dark">Order Now</button>
                         </Link>
                     </Card.Body>
                 </Card>

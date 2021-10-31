@@ -5,5 +5,6 @@ const firebaseConfig = {
     storageBucket: "altantic-cliffs.appspot.com",
     messagingSenderId: "642276618413",
     appId: "1:642276618413:web:774225e60befb397e51624"
-};
+}
+
 export default firebaseConfig;

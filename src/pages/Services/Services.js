@@ -10,10 +10,11 @@ const Services = () => {
         return <Spinner animation="border" variant="danger" />
     }
     return (
-        <div className="mt-5">
+        <div className="my-5">
             <Container>
-                <h2 className="text-center mb-5 fw-bold">Service List</h2>
-                <Row xs={1} md={2} className="g-4">
+                <h3 className="text-center mb-2 fw-bold">Service List</h3>
+                <p className="text-center mb-5">Atlantic Cliff uses an artificial intelligence based system that tracks real-time data ensuring fast delivery. Whether your delivery is for your customer or someone you care for, we will deliver it with care.</p>
+                <Row xs={1} md={3} className="g-4">
                     {
                         services.map(service => <Service
                             service={service}

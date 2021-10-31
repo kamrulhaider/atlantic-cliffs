@@ -8,7 +8,7 @@ const Header = () => {
     const { user, logOut } = useAuth();
     return (
         <div>
-            <Navbar bg="info" variant="dark" expand="lg">
+            <Navbar bg="dark" variant="dark" expand="lg">
                 <Container>
                     <Navbar.Brand as={Link} to="/" className="fw-bold">Atlantic Cliffs</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -38,10 +38,10 @@ const Header = () => {
                         </Nav>
                     </Navbar.Collapse>
                     <div className="me-auto">
-                        <Navbar.Text className="text-dark">{user?.displayName}</Navbar.Text>
+                        <Navbar.Text className="text-warning fw-bold">{user?.displayName}</Navbar.Text>
                         {user?.email ?
-                            <button onClick={logOut} className="btn btn-outline-dark ms-3">Logout</button> :
-                            <Nav.Link as={Link} className="text-light" to="/login">Login</Nav.Link>
+                            <button onClick={logOut} className="btn btn-outline-success ms-3 my-3">Logout</button> :
+                            <Nav.Link as={Link} className="text-success" to="/login">Login</Nav.Link>
                         }
                     </div>
                 </Container>
