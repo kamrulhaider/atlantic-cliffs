@@ -3,6 +3,7 @@ import './Orders.css'
 
 const Orders = () => {
     const [user, setUser] = useState([]);
+    const [pending, setPending] = useState("Pending")
 
     useEffect(() => {
         fetch('https://radiant-gorge-11723.herokuapp.com/users')
@@ -28,6 +29,10 @@ const Orders = () => {
         }
     };
 
+    const handlePending = () => {
+        setPending("Approved")
+    }
+
     return (
         <div className="container orders">
             <div className="row align-items-center flex-column">
@@ -37,16 +42,19 @@ const Orders = () => {
                             <div>
                                 <h5>Customer Name: {every.name}</h5>
                                 <h5>Email: {every.email}</h5>
-                                <p>Status: Pending</p>
+                                <p>Status: {pending}</p>
                             </div>
                             <div>
                                 <h6 className="text-decoration-underline">Orders:</h6>
                                 <p>{every.serviceName}</p>
                                 <p>tk. {every.price}</p>
                             </div>
-                            <button onClick={() => handleDelete(every._id)} className="btn btn-danger my-3">Delete</button>
+                            <div className="d-flex flex-column">
+                                <button onClick={() => handleDelete(every._id)} className="btn btn-danger my-3">Delete</button>
+                            </div>
                         </div>)
                     }
+                    <button onClick={handlePending} className="btn bg-success text-light">Approve All</button>
                 </div>
             </div>
         </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import logo from '../../images/logo-atlantic.png'
 
 const Header = () => {
 
@@ -10,7 +11,15 @@ const Header = () => {
         <div>
             <Navbar bg="dark" variant="dark" expand="lg">
                 <Container>
-                    <Navbar.Brand as={Link} to="/" className="fw-bold">Atlantic Cliffs</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/" className="fw-bold">
+                        <img
+                            alt=""
+                            src={logo}
+                            width="50"
+                            height="30"
+                            className="d-inline-block align-top"
+                        />{' '}
+                        Atlantic Cliffs</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="m-auto">

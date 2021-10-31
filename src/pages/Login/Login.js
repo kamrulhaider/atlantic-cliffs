@@ -20,7 +20,7 @@ const Login = () => {
     return (
         <div className="login">
             <div>
-                <button className="btn btn-warning" onClick={handleGoogleLogin}>Sing in with google</button>
+                <button className="btn btn-warning fw-bold fs-1" onClick={handleGoogleLogin}>Sing in with google</button>
             </div>
         </div>
     );
