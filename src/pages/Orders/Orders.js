@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Orders = () => {
+    const [user, setUser] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/users')
+            .then(res => res.json())
+            .then(data => setUser(data))
+    }, []);
+
     return (
         <div>
-            <h3>this is order page</h3>
+            {
+                user.map(every => <div>
+                    <h1>{every.name}</h1>
+                </div>)
+            }
         </div>
     );
 };

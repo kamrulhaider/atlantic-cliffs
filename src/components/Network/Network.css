@@ -1,0 +1,15 @@
+.network {
+  background-image: url("https://i.ibb.co/wh9PSQN/contact-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px 100px;
+}
+.net-text h1,
+.net-color {
+  color: wheat;
+}
+.net-text h3,
+.net-aus {
+  color: wheat;
+}

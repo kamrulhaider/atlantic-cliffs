@@ -1,0 +1,14 @@
+.cost-form {
+  background-color: cadetblue;
+  border-radius: 5px;
+}
+.cost-input,
+.cost-output {
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+}
+.cost-input:focus,
+.cost-output:focus {
+  outline: none;
+}

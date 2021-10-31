@@ -1,4 +1,6 @@
 import React from 'react';
+import Network from '../../components/Network/Network';
+import PriceCalc from '../../components/PriceCalc/PriceCalc';
 import banner from '../../images/banner.png';
 import Services from '../Services/Services';
 import './Home.css'
@@ -26,6 +28,8 @@ const Home = () => {
                 </div>
             </div>
             <Services></Services>
+            <Network></Network>
+            <PriceCalc></PriceCalc>
         </div>
     );
 };
