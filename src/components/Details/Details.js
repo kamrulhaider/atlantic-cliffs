@@ -10,7 +10,7 @@ const Details = () => {
     const [details, setDetails] = useState({})
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${serviceId}`)
+        fetch(`https://radiant-gorge-11723.herokuapp.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setDetails(data))
     }, [])
@@ -18,7 +18,7 @@ const Details = () => {
     const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data)
-        axios.post('http://localhost:5000/users', data)
+        axios.post('https://radiant-gorge-11723.herokuapp.com/users', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Order Placed');

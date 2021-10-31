@@ -20,7 +20,7 @@ const PriceCalc = () => {
                             <input type="text" className="cost-input px-2 py-2" placeholder=" Pickup from" />
                         </div>
                         <div className="col-lg-5 col-md-4 mb-md-0 mb-2">
-                            <input type="text" className="cost-output px-2 py-2" placeholder="Deliverd to" />
+                            <input type="text" className="cost-output px-2 py-2" placeholder="Delivered to" />
                         </div>
                         <div className="col-lg-2 col-md-4">
                             <button className="btn text-light btn-outline-primary py-2 fw-bold w-100" type="button">Check
