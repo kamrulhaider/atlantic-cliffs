@@ -12,7 +12,7 @@ const MyOrder = () => {
             .then(data => setList(data));
     }, [])
 
-    const result = list.filter(data => data.name === user.displayName);
+    const result = list.filter(data => data.email === user.email);
 
     const handleDelete = id => {
         const proceed = window.confirm("Are you sure to delete?")
