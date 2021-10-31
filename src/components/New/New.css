@@ -1,0 +1,10 @@
+.new-order form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.new-order form input,
+textarea {
+  width: 40%;
+  margin-bottom: 20px;
+}

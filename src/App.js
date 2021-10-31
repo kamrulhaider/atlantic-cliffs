@@ -36,7 +36,7 @@ function App() {
             <PrivateRoute path="/new">
               <New></New>
             </PrivateRoute>
-            <PrivateRoute path="/details/:therapyId">
+            <PrivateRoute path="/details/:serviceId">
               <Details></Details>
             </PrivateRoute>
             <Route path="/login">

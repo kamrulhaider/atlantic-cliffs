@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Service = (props) => {
 
     // using destructuring
-    const { key, img, name, details } = props.service;
+    const { _id, img, name, description, price } = props.service;
     return (
         <div>
             <Col>
@@ -14,10 +14,11 @@ const Service = (props) => {
                     <Card.Body className="therapy-body">
                         <Card.Title>{name}</Card.Title>
                         <Card.Text>
-                            {details.slice(0, 200)}...
+                            {description.slice(0, 150)}...
                         </Card.Text>
-                        <Link to={`/details/${key}`}>
-                            <button className="btn btn-outline-dark">More Details</button>
+                        <h5>Price: {price}</h5>
+                        <Link to={`/details/${_id}`}>
+                            <button className="btn btn-outline-dark">Buy Now</button>
                         </Link>
                     </Card.Body>
                 </Card>

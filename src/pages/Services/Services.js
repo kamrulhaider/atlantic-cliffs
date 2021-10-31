@@ -1,10 +1,14 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Spinner } from 'react-bootstrap';
 import Service from '../../components/Service/Service';
 import useServices from '../../hooks/useServices';
 
 const Services = () => {
     const [services] = useServices();
+
+    if (services.length === 0) {
+        return <Spinner animation="border" variant="danger" />
+    }
     return (
         <div className="mt-5">
             <Container>
@@ -13,7 +17,7 @@ const Services = () => {
                     {
                         services.map(service => <Service
                             service={service}
-                            key={service.key}
+                            key={service._id}
                         ></Service>)
                     }
                 </Row>
