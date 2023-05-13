@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyCuvbsyo0nmaXQS31972tonnFt0GakhkRM",
-    authDomain: "altantic-cliffs.firebaseapp.com",
-    projectId: "altantic-cliffs",
-    storageBucket: "altantic-cliffs.appspot.com",
-    messagingSenderId: "642276618413",
-    appId: "1:642276618413:web:774225e60befb397e51624"
-}
+  apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECTID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_FIREBASE_APPID,
+};
 
 export default firebaseConfig;
