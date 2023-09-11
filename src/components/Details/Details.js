@@ -11,9 +11,7 @@ const Details = () => {
   const [details, setDetails] = useState({});
 
   useEffect(() => {
-    fetch(
-      `https://atlantic-cliffs-server-production.up.railway.app/services/${serviceId}`
-    )
+    fetch(`https://atlantic-clifs-api.onrender.com/services/${serviceId}`)
       .then((res) => res.json())
       .then((data) => setDetails(data));
   }, []);
@@ -27,10 +25,7 @@ const Details = () => {
   } = useForm();
   const onSubmit = (data) => {
     axios
-      .post(
-        "https://atlantic-cliffs-server-production.up.railway.app/users",
-        data
-      )
+      .post("https://atlantic-clifs-api.onrender.com/users", data)
       .then((res) => {
         if (res.data.insertedId) {
           alert("Order Placed");

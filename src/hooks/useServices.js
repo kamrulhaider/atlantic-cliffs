@@ -4,7 +4,7 @@ const useServices = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("https://atlantic-cliffs-server-production.up.railway.app/services")
+    fetch("https://atlantic-clifs-api.onrender.com/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);

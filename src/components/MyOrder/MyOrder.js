@@ -7,7 +7,7 @@ const MyOrder = () => {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    fetch("https://atlantic-cliffs-server-production.up.railway.app/users")
+    fetch("https://atlantic-clifs-api.onrender.com/users")
       .then((res) => res.json())
       .then((data) => setList(data));
   }, []);
@@ -17,7 +17,7 @@ const MyOrder = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure to delete?");
     if (proceed) {
-      const url = `https://atlantic-cliffs-server-production.up.railway.app/users/${id}`;
+      const url = `https://atlantic-clifs-api.onrender.com/users/${id}`;
       fetch(url, {
         method: "DELETE",
       })

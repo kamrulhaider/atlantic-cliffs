@@ -14,10 +14,7 @@ const New = () => {
   const onSubmit = (data) => {
     console.log(data);
     axios
-      .post(
-        "https://atlantic-cliffs-server-production.up.railway.app/services",
-        data
-      )
+      .post("https://atlantic-clifs-api.onrender.com/services", data)
       .then((res) => {
         if (res.data.insertedId) {
           alert("added successfully");
